@@ -6,7 +6,7 @@ name: Nanja Monja Ninja
 jobs:
   FTP-To-Ninja:
     name: FTP-to-Ninja
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: Use Node.js 12.16
