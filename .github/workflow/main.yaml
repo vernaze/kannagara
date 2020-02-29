@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+      - feature/auto-deploy
+name: Nanja Monja Ninja
+jobs:
+  FTP-to-Ninja:
+    name: FTP-to-Ninja
+    runs-on: macOS-latest
+steps:
+  - uses: actions/checkout@master
+  - name: Use Node.js 12.16
+    uses: actions/setup-node@v1
+    with:
+      node-version: '12.16'
+  - name: build gatsby
+    run: yarn
+      yarn gatsby build
+  - name: FTP-to-Ninja
+    uses: SamKirkland/FTP-Deploy-Action@2.0.0
+    env:
+      FTP_ADDRESS: ${{ secrets.FTP_ADDRESS }}
+      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      LOCAL_DIR: public
+      REMOTE_DIR: test/
