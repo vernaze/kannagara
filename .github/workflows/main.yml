@@ -4,8 +4,8 @@ on:
       - feature/auto-deploy
 name: Nanja Monja Ninja
 jobs:
-  FTP-to-Ninja:
-    name: FTP-to-Ninja
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
     runs-on: macOS-latest
 steps:
   - uses: actions/checkout@master
