@@ -14,7 +14,8 @@ steps:
     with:
       node-version: '12.16'
   - name: build gatsby
-    run: yarn
+    run: |
+      yarn
       yarn gatsby build
   - name: FTP-Deploy-Action
     uses: SamKirkland/FTP-Deploy-Action@2.0.0
