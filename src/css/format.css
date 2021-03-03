@@ -1,0 +1,25 @@
+article span.red {
+	color:#FF0000;
+	}
+
+article span.bold {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+	font-weight:bold;
+	}
+
+article span.large {
+	font-size:35px;
+	}
+
+article span.small {
+	font-size:10px;
+	}
+
+article span.hidden {
+  color: #FFF;
+  }
+
+article img {
+    display: block;
+    margin: 0 auto;
+  }
